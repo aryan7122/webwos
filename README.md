@@ -11,15 +11,6 @@ Welcome to my portfolio! This project showcases my skills, projects, and experie
 <img width="450px;" src="https://github.com/rishavchanda/rishav-chanda-portfolio/assets/64485885/10647898-7154-434c-84e6-edee6679ca92"/>
 
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 My Portfolio is a React.js application that serves as an online portfolio to showcase my work, skills, and achievements. It provides an overview of my background, displays my projects, and offers a way to contact me.
 
