@@ -1,169 +1,229 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
-
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-@media (max-width: 960px) {
-    padding: 0px;
-}
-`
-
-const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1350px;
-padding: 0px 0px 80px 0px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
-
-const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
-  }
-`;
-
-const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        margin-top: 12px;
-        font-size: 16px;
-    }
-`;
-
-
-const ContactForm = styled.form`
-  width: 95%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  background-color: ${({ theme }) => theme.card};
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  margin-top: 28px;
-  gap: 12px;
-`
-
-const ContactTitle = styled.div`
-  font-size: 24px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-`
-
-const ContactInput = styled.input`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`
-
-const ContactInputMessage = styled.textarea`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`
-
-const ContactButton = styled.input`
-  width: 100%;
-  text-decoration: none;
-  text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  padding: 13px 16px;
-  margin-top: 2px;
-  border-radius: 12px;
-  border: none;
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 18px;
-  font-weight: 600;
-`
-
-
+import React, { useState } from 'react';
+import './style.css'
 
 const Contact = () => {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
-  //hooks
-  const [open, setOpen] = React.useState(false);
-  const form = useRef();
+  const handleSubmited = () => {
+    setIsFormSubmitted(true)
+    setTimeout(() => {
+      setIsFormSubmitted(false);
+    }, 2000);
+  };
+
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState({});
+  // const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
+    // setIsSubmissionSuccessful(false)
     e.preventDefault();
-    emailjs.sendForm('service_joilo9a', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
+    const validationErrors = validateForm();
+    // console.log('validationErrors lenth', Object.keys(validationErrors).length === 0)
+    if (Object.keys(validationErrors).length === 0) {
+      // setSubmitted(true);
+      setErrors({});
+      resetForm();
+      sendFormEmail();
+    } else {
+      setErrors(validationErrors);
+
+    }
+  };
+
+  const validateForm = () => {
+    const validationErrors = {};
+    if (!formData.name) {
+      validationErrors.name = 'Name is required';
+    }
+    if (!formData.email) {
+      validationErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      validationErrors.email = 'Email is invalid';
+    }
+    if (!formData.phone) {
+      validationErrors.phone = 'Phone number is required';
+    }
+    if (!formData.subject) {
+      validationErrors.subject = 'Subject is required';
+    }
+    if (!formData.message) {
+      validationErrors.message = 'Message is required';
+    }
+    return validationErrors;
+  };
+
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+    });
+  };
+
+
+  const sendFormEmail = () => {
+    const emailData = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    fetch('https://formspree.io/f/xbjenkbr', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(emailData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          handleSubmited()
+          console.log('Email sent successfully');
+          // Reset the form after successful submission
+
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: '',
+          });
+        } else {
+          alert('Failed to send email');
+        }
+      })
+      .catch((error) => {
+        console.log('Error sending email:', error);
       });
-  }
-
-
+  };
 
   return (
-    <Container>
-      <Wrapper>
-        <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
-      </Wrapper>
-    </Container>
-  )
-}
+    <div className="main">
+      <h2 className="contact">
+        <h1>Contact</h1>
+        <p>Feel free to reach out to me for any questions or opportunities!</p>
+      </h2>
+      <div className="form_div">
+        <h2 className="text">Contact Me</h2>
 
-export default Contact
+        <div className="form_box">
+
+          <form className="form " onSubmit={handleSubmit}>
+            {isFormSubmitted && (
+              <p className="submitted_form ">Form submitted successfully!</p>
+            )}
+
+
+            {/* <div className=''> */}
+
+            <div className=" ">
+              <label htmlFor="name" className="block font-medium ">
+                {/* Name */}
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder='Name'
+                value={formData.name}
+                onChange={handleChange}
+
+              />
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block font-medium ">
+                {/* Email */}
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder='email'
+                value={formData.email}
+                onChange={handleChange}
+
+              />
+              {errors.email && <p className="text-red-500 text-sm ">{errors.email}</p>}
+            </div>
+            <div className="mb-4">
+              <label htmlFor="phone" className="block font-medium ">
+                {/* Phone Number */}
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder='Phone Number'
+                value={formData.phone}
+                onChange={handleChange}
+
+              />
+              {errors.phone && <p className="text-red-500 text-sm ">{errors.phone}</p>}
+            </div>
+            <div className="">
+              <label htmlFor="subject" className="block font-medium ">
+                {/* Subject */}
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder='Subject'
+                value={formData.subject}
+                onChange={handleChange}
+
+              />
+              {errors.subject && <p className="text-red-500 text-sm ">{errors.subject}</p>}
+            </div>
+            {/* </div> */}
+
+            <div className="">
+              <label htmlFor="message" className="block font-medium">
+                {/* Message */}
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder='Your message Write hare'
+                value={formData.message}
+                onChange={handleChange}
+                // className={`w-full p-2  border ${errors.message ? 'border-red-500' : 'border-gray-300'
+                //     } rounded`}
+                rows={5}
+              ></textarea>
+              {errors.message && <p className="text-red-500 text-sm ">{errors.message}</p>}
+            </div>
+            <button
+              // onClick={handleSubmited}
+              type="submit"
+              className="submit"
+            >
+              Send Message
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
