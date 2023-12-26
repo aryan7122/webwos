@@ -1,10 +1,11 @@
 import React from 'react'
 import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
-import { DiCssdeck } from 'react-icons/di';
+// import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 // import { CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
+import aryan from '../../images/HeroImage.jpg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -15,8 +16,9 @@ const Navbar = () => {
         <NavLogo to='/'>
           {/* <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
           </a> */}
-          <DiCssdeck size="3rem" />
-          <Span>Portfolio</Span>
+          {/* <DiCssdeck size="3rem" /> */}
+          <img src={aryan} alt="" style={{ width: '30px',height:'30px', borderRadius:'50%',objectFit:'contain'}}/>
+          <Span>Aryan</Span>
         </NavLogo>
         <MobileIcon>
           <FaBars onClick={() => {
