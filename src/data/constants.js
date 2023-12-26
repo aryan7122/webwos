@@ -10,7 +10,7 @@ export const Bio = {
   ],
   description: "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/aryan7122",
-  resume: "https://drive.google.com/file/d/1V2sKutHQ8H4v5p1a57cpS9hATxd2wpA7/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1nDL8z4kRCoBAQTsHZzsBcZsazbBig_zq/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/aryan7122/",
   // twitter: "https://twitter.com/RishavChanda",
   // insta: "https://www.instagram.com/rishav_chanda/",
