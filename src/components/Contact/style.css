@@ -23,6 +23,7 @@ p {
     .main .contact p{
         font-size: 14px;
         padding: 0 10px;
+        text-align: center;
     }
 }
 
