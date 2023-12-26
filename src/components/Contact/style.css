@@ -91,3 +91,7 @@ p {
 .submitted_form_error{
  color: brown;
 }
+
+.text-red{
+    color: rgba(255, 0, 0, 0.664);
+}

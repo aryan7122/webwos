@@ -146,7 +146,7 @@ const Contact = () => {
                 onChange={handleChange}
 
               />
-              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+              {errors.name && <p className="text-red">{errors.name}</p>}
             </div>
             <div className="mb-4">
               <label htmlFor="email" className="block font-medium ">
@@ -161,7 +161,7 @@ const Contact = () => {
                 onChange={handleChange}
 
               />
-              {errors.email && <p className="text-red-500 text-sm ">{errors.email}</p>}
+              {errors.email && <p className="text-red">{errors.email}</p>}
             </div>
             <div className="mb-4">
               <label htmlFor="phone" className="block font-medium ">
@@ -176,7 +176,7 @@ const Contact = () => {
                 onChange={handleChange}
 
               />
-              {errors.phone && <p className="text-red-500 text-sm ">{errors.phone}</p>}
+              {errors.phone && <p className="text-red">{errors.phone}</p>}
             </div>
             <div className="">
               <label htmlFor="subject" className="block font-medium ">
@@ -191,7 +191,7 @@ const Contact = () => {
                 onChange={handleChange}
 
               />
-              {errors.subject && <p className="text-red-500 text-sm ">{errors.subject}</p>}
+              {errors.subject && <p className="text-red">{errors.subject}</p>}
             </div>
             {/* </div> */}
 
@@ -209,7 +209,7 @@ const Contact = () => {
                 //     } rounded`}
                 rows={5}
               ></textarea>
-              {errors.message && <p className="text-red-500 text-sm ">{errors.message}</p>}
+              {errors.message && <p className="text-red">{errors.message}</p>}
             </div>
             <button
               // onClick={handleSubmited}
