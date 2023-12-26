@@ -18,7 +18,7 @@ const Navbar = () => {
           </a> */}
           {/* <DiCssdeck size="3rem" /> */}
           <img src={aryan} alt="" style={{ width: '30px',height:'30px', borderRadius:'50%',objectFit:'contain'}}/>
-          <Span>Aryan</Span>
+          <Span>Aryan Portfolio</Span>
         </NavLogo>
         <MobileIcon>
           <FaBars onClick={() => {
