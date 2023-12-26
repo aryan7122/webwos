@@ -20,8 +20,8 @@ body{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 4px;
-    height: 80px;
+    /* width: 4px; */
+    /* height: 80px; */
   }
   
   /* Track */

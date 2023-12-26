@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Container = styled.div`
 padding:none;
 width: 100%;
-height: 113vh;
+height: 100%;
 position: absolute;
 top: 0;
 left: 0;
