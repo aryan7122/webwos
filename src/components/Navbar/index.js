@@ -17,7 +17,7 @@ const Navbar = () => {
           {/* <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
           </a> */}
           {/* <DiCssdeck size="3rem" /> */}
-          <img src={aryan} alt="" style={{ width: '30px',height:'30px', borderRadius:'50%',objectFit:'contain'}}/>
+          <img src={aryan} alt="" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'contain' }} />
           <Span>Aryan Portfolio</Span>
         </NavLogo>
         <MobileIcon>
