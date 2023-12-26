@@ -121,7 +121,7 @@ const Contact = () => {
         <p>Feel free to reach out to me for any questions or opportunities!</p>
       </h2>
       <div className="form_div">
-        <h2 className="text">Contact Me</h2>
+        <h2 className="text">Email Me 📧</h2>
 
         <div className="form_box">
 
