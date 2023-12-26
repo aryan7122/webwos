@@ -303,9 +303,28 @@ export const projects = [
     date: "Dec -2023",
     description: "I developed a comprehensive full- stack web application that prioritizes user security through robust authentication functionalities.Users can seamlessly register, log in, and recover passwords within the application.The implementation leverages advanced technologies such as bcryptjs for password hashing, CORS for secure cross - origin resource sharing, dotenv for environment variable management, jsonwebtoken for secure token - based authentication, and nodemailer for efficient email communication.This project demonstrates my proficiency in creating secure, user - friendly, and feature - rich web applications.",
     image: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/auth.jpg?raw=true",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js"],
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js","Bootstrap"],
     category: "web app",
     github: "https://github.com/aryan7122/MERN_authentication-",
+    webapp: "/",
+    member: [{
+      name: "Aryan Kushwaha",
+      img: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/HeroImage.jpg?raw=true",
+      linkedin: "https://www.linkedin.com/in/aryan-kushwaha-7dec2/",
+      github: "https://github.com/aryan7122",
+    },
+
+    ],
+  },
+  {
+    id: 2,
+    title: "Todo",
+    date: "Dec -2023",
+    description: "I successfully developed a CRUD full-stuck web application that leverages CORS for secure cross-origin resource sharing. The application features three input boxes—name, age, and email—empowering users to effortlessly create, update, and delete records. This project not only showcases my proficiency in building CRUD applications but also highlights my expertise in implementing CORS for enhanced security. The seamless integration of these features results in a user-friendly and efficient web experience. Explore this project on my portfolio website for a closer look at my skills and capabilities in web development.",
+    image: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/crud.jpg?raw=true",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js","Bootstrap"],
+    category: "web app",
+    github: "https://github.com/aryan7122/CRUD_MERN",
     webapp: "/",
     member: [{
       name: "Aryan Kushwaha",
@@ -321,8 +340,8 @@ export const projects = [
     title: "CRUD",
     date: "Dec -2023",
     description: "I successfully developed a CRUD full-stuck web application that leverages CORS for secure cross-origin resource sharing. The application features three input boxes—name, age, and email—empowering users to effortlessly create, update, and delete records. This project not only showcases my proficiency in building CRUD applications but also highlights my expertise in implementing CORS for enhanced security. The seamless integration of these features results in a user-friendly and efficient web experience. Explore this project on my portfolio website for a closer look at my skills and capabilities in web development.",
-    image: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/auth.jpg?raw=true",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js","Bootsrap"],
+    image: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/crud.jpg?raw=true",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js","Bootstrap"],
     category: "web app",
     github: "https://github.com/aryan7122/CRUD_MERN",
     webapp: "/",
@@ -335,7 +354,6 @@ export const projects = [
 
     ],
   },
-
 
 ];
 
