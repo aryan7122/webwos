@@ -6,9 +6,9 @@ const themeConfig = {
   },
   // Colors for layout
   colors: {
-    primary1: "#854CE6",
+    primary1: "#FF98008A",
     background1: "#222A35",
-    button: "#854CE6",
+    button: "#FF98008A",
     background2: "#19212C",
     text: "#C8CFD8",
     text1: "#F2F5F7",

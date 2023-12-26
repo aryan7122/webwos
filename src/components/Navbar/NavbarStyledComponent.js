@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // import _default from '../../themes/default';
 
 export const Nav = styled.div`
-    background-color: ${({theme}) => theme.card_light};
+    background-color: ${({ theme }) => theme.card_light};
     height: 80px;
     display: flex;
     align-items: center;
@@ -27,7 +27,8 @@ export const NavbarContainer = styled.div`
   max-width: 1200px;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled.span`
+    color:#c27300;
     width: 80%;    
     padding: 0 6px;
     display: flex;
@@ -38,11 +39,13 @@ export const NavLogo = styled(LinkR)`
       padding: 0 0px;
   }
 `;
+
 export const Span = styled.div`
     padding: 0 4px;
     font-weight: bold;
     font-size: 18px;
 `;
+
 export const NavItems = styled.ul`
     width: 100%;
     display: flex;
@@ -133,7 +136,7 @@ export const MobileMenu = styled.div`
     right: 0;
     width: 100%;
     padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
+    background: ${({ theme }) => theme.card_light + 99};
     transition: all 0.4s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
     border-radius: 0 0 20px 20px;
@@ -190,7 +193,7 @@ export const MobileMenuButton = styled.a`
   }
 `;
 
-export  const MobileLink = styled.a`
+export const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -212,6 +215,7 @@ export const MobileNavLogo = styled(LinkR)`
   justify-content: start;
   align-items: center;
   text-decoration: none;
+  
   @media (max-width: 640px) {
     padding: 0 0px;
   }
