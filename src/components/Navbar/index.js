@@ -14,8 +14,6 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          {/* <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
-          </a> */}
           {/* <DiCssdeck size="3rem" /> */}
           <img src={aryan} alt="" style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'contain' }} />
           <Span>Aryan's Portfolio </Span>
