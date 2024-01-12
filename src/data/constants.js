@@ -125,10 +125,10 @@ export const skills = [{
 //   ],
 // },
 {
-  title: "Others",
+  title: "Others Tools",
   skills: [{
     name: "Git",
-    image: "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+    image: "https://github.githubassets.com/images/modules/logos_page/git.png",
   },
   {
     name: "GitHub",
@@ -148,7 +148,7 @@ export const skills = [{
   },
   {
     name: "Postman",
-    image: "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
+    image: "https://github.githubassets.com/images/modules/logos_page/Postman.png",
   },
   {
     name: "Adobe XD",
@@ -156,7 +156,7 @@ export const skills = [{
   },
   {
     name: "Figma",
-    image: "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
+    image: "https://github.githubassets.com/images/modules/logos_page/figma.jpg",
   },
   ],
 },
