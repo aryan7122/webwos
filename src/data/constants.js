@@ -271,7 +271,7 @@ export const education = [{
   school: "Nehru Gram Bharati University Deemed university in Hanuman Ganj, Uttar Pradesh",
   date: "Aug 2021 - doing",
   grade: "7.71 CGPA",
-  desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Nehru Gram Bharati University Deemed university in Hanuman Ganj, Uttar Pradesh. I have completed 5 semesters and have a CGPA of 7.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club (GDSC) at KIIT, where I am learning and working on exciting projects with a team of talented developers.",
+  desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Nehru Gram Bharati University Deemed university in Hanuman Ganj, Uttar Pradesh. I have completed 5 semesters and have a CGPA of 7.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
   degree: "Bachelor of Computer Application  - BCA",
 },
   // {
