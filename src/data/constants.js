@@ -298,8 +298,46 @@ export const projects = [
 
   {
     id: 0,
+    title: "School Management System",
+    date: "Apr -2024",
+    description: "This School Management System is built using the MERN stack (MongoDB, Express.js, React, Node.js). The frontend, developed with React and Vite, features styled-components and Tailwind for design. The backend ensures robust authentication and user management, leveraging bcryptjs for password hashing, jsonwebtoken for token-based authentication, and nodemailer for email communication. This project highlights a secure, user-friendly, and feature-rich application for managing school operations.",
+    image: "https://github.com/yatunyi15075/Mern-School-Management-System/raw/master/frontend/src/assets/YouTube_Thumbnail.png",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Tailwindcss", "React-redux"],
+    category: "web app",
+    github: "https://github.com/aryan7122/User_Management_System",
+    webapp: " ",
+    member: [{
+      name: "Aryan Kushwaha",
+      img: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/HeroImage.jpg?raw=true",
+      linkedin: "https://www.linkedin.com/in/aryan-kushwaha-7dec2/",
+      github: "https://github.com/aryan7122",
+    },
+
+    ],
+  },
+  {
+    id: 0,
+    title: "Blood Bank Management System",
+    date: "Mar -2024",
+    description: "Blood Donation Management System is a comprehensive web application developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). This application aims to streamline the process of blood donation by connecting donors, hospitals, organisations, and administrators on a single platform. It facilitates the seamless coordination of blood donation drives, donor registrations, blood requests, and inventory management, thereby contributing significantly to the efficient management of blood donation activities. Technologies Used: Frontend: React.js, HTML, CSS, JavaScript Backend: Node.js, Express.js Database: MongoDB Additional Tools: Redux (for state management), Axios (for API requests), JWT (for authentication",
+    image: "https://github.com/aryan7122/webwos_client/blob/master/src/images/Screenshot%202024-06-23%20132800.png?raw=true",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Tailwindcss", "React-redux"],
+    category: "web app",
+    github: "https://github.com/aryan7122/User_Management_System",
+    webapp: " ",
+    member: [{
+      name: "Aryan Kushwaha",
+      img: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/HeroImage.jpg?raw=true",
+      linkedin: "https://www.linkedin.com/in/aryan-kushwaha-7dec2/",
+      github: "https://github.com/aryan7122",
+    },
+
+    ],
+  },
+  {
+    id: 0,
     title: "User Management System",
-    date: "Dec -2023",
+    date: "Jun -2024",
     description: "I developed a comprehensive full- stack web application , project that includes the user management system simple create user with name,email gender city and profile pic  user - friendly, and feature - rich web applications.",
     image: "https://github.com/aryan7122/webwos_client/blob/master/src/images/ums.png?raw=true",
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Bootstrap", "React-redux"],
@@ -318,7 +356,7 @@ export const projects = [
   {
     id: 0,
     title: "Authentication",
-    date: "Dec -2023",
+    date: "Jun -2024",
     description: "I developed a comprehensive full- stack web application that prioritizes user security through robust authentication functionalities.Users can seamlessly register, log in, and recover passwords within the application.The implementation leverages advanced technologies such as bcryptjs for password hashing, CORS for secure cross - origin resource sharing, dotenv for environment variable management, jsonwebtoken for secure token - based authentication, and nodemailer for efficient email communication.This project demonstrates my proficiency in creating secure, user - friendly, and feature - rich web applications.",
     image: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/auth.jpg?raw=true",
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Bootstrap"],
