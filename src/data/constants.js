@@ -298,6 +298,25 @@ export const projects = [
 
   {
     id: 0,
+    title: "User Management System",
+    date: "Dec -2023",
+    description: "I developed a comprehensive full- stack web application that prioritizes user security through robust authentication functionalities.Users can seamlessly register, log in, and recover passwords within the application.The implementation leverages advanced technologies such as bcryptjs for password hashing, CORS for secure cross - origin resource sharing, dotenv for environment variable management, jsonwebtoken for secure token - based authentication, and nodemailer for efficient email communication.This project demonstrates my proficiency in creating secure, user - friendly, and feature - rich web applications.",
+    image: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/auth.jpg?raw=true",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Bootstrap","React-redux"],
+    category: "web app",
+    github: "https://github.com/aryan7122/User_Management_System",
+    webapp: " ",
+    member: [{
+      name: "Aryan Kushwaha",
+      img: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/HeroImage.jpg?raw=true",
+      linkedin: "https://www.linkedin.com/in/aryan-kushwaha-7dec2/",
+      github: "https://github.com/aryan7122",
+    },
+
+    ],
+  },
+  {
+    id: 0,
     title: "Authentication",
     date: "Dec -2023",
     description: "I developed a comprehensive full- stack web application that prioritizes user security through robust authentication functionalities.Users can seamlessly register, log in, and recover passwords within the application.The implementation leverages advanced technologies such as bcryptjs for password hashing, CORS for secure cross - origin resource sharing, dotenv for environment variable management, jsonwebtoken for secure token - based authentication, and nodemailer for efficient email communication.This project demonstrates my proficiency in creating secure, user - friendly, and feature - rich web applications.",
