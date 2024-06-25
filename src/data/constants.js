@@ -324,8 +324,8 @@ export const projects = [
     image: "https://github.com/aryan7122/webwos_client/blob/master/src/images/e.png?raw=true",
     tags: ["React Js", "Css", "Tailwindcss", "Bootstrap", "MongoDb", "Node Js", "Express Js", "Recharts", "React-redux","razorpay"],
     category: "web app",
-    github: "https://github.com/aryan7122/MERN_BLOG_Client",
-    webapp: "https://aryanblog.vercel.app",
+    github: "https://github.com/aryan7122/MERN_Ecommerce-",
+    webapp: "https://github.com/aryan7122/MERN_Ecommerce-",
     member: [{
       name: "Aryan Kushwaha",
       img: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/HeroImage.jpg?raw=true",
