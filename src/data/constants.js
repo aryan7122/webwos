@@ -296,6 +296,7 @@ export const education = [{
 
 export const projects = [
 
+ 
   {
     id: 0,
     title: "Blogging Website",
@@ -316,7 +317,26 @@ export const projects = [
     ],
   },
   {
-    id: 0,
+    id: 11,
+    title: "Ecommerce Website",
+    date: "May -2024",
+    description: "The ecommerce website leverages the MERN stack (MongoDB, Express.js, React.js, and Node.js) to create a robust, dynamic platform. MongoDB is used for storing product information, user data, and order details due to its flexible schema and scalability. Express.js, a minimalist web application framework, handles the server-side application, routing API requests efficiently. React.js, chosen for front-end development, enables the creation of reusable UI components and ensures efficient rendering with its virtual DOM. Node.js, the server-side runtime environment, allows for executing JavaScript code outside the browser. On the back-end, Node.js and Express.js set up a server to manage HTTP requests and responses, implementing RESTful APIs for seamless front-end and back-end communication. Front-end development involves using Create React App to build a scalable project structure, with React Router managing client-side routing. For user authentication, Passport.js or JWT ensures secure access to the website. MongoDB's schema handles CRUD operations for product management, while the shopping cart and checkout processes are streamlined with third-party payment integration. State management with Redux or Context API ensures data consistency, and comprehensive testing with Jest and React Testing Library maintains code reliability. The system's design addresses both functional requirements like user authentication, product catalog, and order management, and non-functional requirements such as performance, security, scalability, and accessibility.",
+    image: "https://github.com/aryan7122/MERN_BLOG_Client/raw/master/src/assets/images/git_rm/adminmenu.png",
+    tags: ["React Js", "Css", "Tailwindcss", "MUI", "MongoDb", "Node Js", "Express Js", "Recharts", "React-redux"],
+    category: "web app",
+    github: "https://github.com/aryan7122/MERN_BLOG_Client",
+    webapp: "https://aryanblog.vercel.app",
+    member: [{
+      name: "Aryan Kushwaha",
+      img: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/HeroImage.jpg?raw=true",
+      linkedin: "https://www.linkedin.com/in/aryan-kushwaha-7dec2/",
+      github: "https://github.com/aryan7122",
+    },
+
+    ],
+  },
+  {
+    id: 1,
     title: "Rock Paper Scissor",
     date: "Apr -2024",
     description: "I developed a user-friendly Rock-Paper-Scissors game using React. In this game, users can play against the computer, with the interface designed for simplicity and ease of use. The game is styled using CSS, ensuring an engaging and visually appealing experience.",
@@ -335,7 +355,7 @@ export const projects = [
     ],
   },
   {
-    id: 0,
+    id: 2,
     title: "School Management System",
     date: "Apr -2024",
     description: "This School Management System is built using the MERN stack (MongoDB, Express.js, React, Node.js). The frontend, developed with React and Vite, features styled-components and Tailwind for design. The backend ensures robust authentication and user management, leveraging bcryptjs for password hashing, jsonwebtoken for token-based authentication, and nodemailer for email communication. This project highlights a secure, user-friendly, and feature-rich application for managing school operations.",
@@ -354,7 +374,7 @@ export const projects = [
     ],
   },
   {
-    id: 0,
+    id: 3,
     title: "Blood Bank Management System",
     date: "Mar -2024",
     description: "Blood Donation Management System is a comprehensive web application developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). This application aims to streamline the process of blood donation by connecting donors, hospitals, organisations, and administrators on a single platform. It facilitates the seamless coordination of blood donation drives, donor registrations, blood requests, and inventory management, thereby contributing significantly to the efficient management of blood donation activities. Technologies Used: Frontend: React.js, HTML, CSS, JavaScript Backend: Node.js, Express.js Database: MongoDB Additional Tools: Redux (for state management), Axios (for API requests), JWT (for authentication",
@@ -373,7 +393,7 @@ export const projects = [
     ],
   },
   {
-    id: 0,
+    id: 4,
     title: "User Management System",
     date: "Jun -2024",
     description: "I developed a comprehensive full- stack web application , project that includes the user management system simple create user with name,email gender city and profile pic  user - friendly, and feature - rich web applications.",
@@ -392,7 +412,7 @@ export const projects = [
     ],
   },
   {
-    id: 0,
+    id: 5,
     title: "Authentication",
     date: "Jun -2024",
     description: "I developed a comprehensive full- stack web application that prioritizes user security through robust authentication functionalities.Users can seamlessly register, log in, and recover passwords within the application.The implementation leverages advanced technologies such as bcryptjs for password hashing, CORS for secure cross - origin resource sharing, dotenv for environment variable management, jsonwebtoken for secure token - based authentication, and nodemailer for efficient email communication.This project demonstrates my proficiency in creating secure, user - friendly, and feature - rich web applications.",
@@ -411,7 +431,7 @@ export const projects = [
     ],
   },
   {
-    id: 1,
+    id: 6,
     title: "CRUD",
     date: "Dec -2023",
     description: "I successfully developed a CRUD full-stuck web application that leverages CORS for secure cross-origin resource sharing. The application features three input boxes—name, age, and email—empowering users to effortlessly create, update, and delete records. This project not only showcases my proficiency in building CRUD applications but also highlights my expertise in implementing CORS for enhanced security. The seamless integration of these features results in a user-friendly and efficient web experience. Explore this project on my portfolio website for a closer look at my skills and capabilities in web development.",
@@ -430,7 +450,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 7,
     title: "Todo",
     date: "Dec -2023",
     description: "I developed a TODO full-stuck web applicationI developed a Todo application featuring comprehensive CRUD operations—create, update, and delete tasks—with a user-friendly input box. The application utilizes CORS to facilitate secure communication. Users can seamlessly manage their tasks, observing the status of each task indicating whether it is completed or pending. This project showcases my ability to create practical and efficient web applications with a focus on user interactivity and data manipulation.",
@@ -449,7 +469,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 8,
     title: "E-commerce",
     date: "Sep -2023",
     description: "I crafted a dynamic e-commerce web application utilizing React and Redux. The platform offers a seamless user experience with features such as price filtering, rating sorting, and category-based search functionalities. Users can effortlessly explore products and enhance their shopping experience through an intuitive interface. The application supports adding products to the cart, providing a straightforward and enjoyable shopping journey. This project showcases my proficiency in building responsive and feature-rich web applications using React and state management with Redux.",
@@ -468,7 +488,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 9,
     title: "FeeFlow",
     date: "Oct -2023",
     description: "I successfully designed and developed a versatile React website showcasing a comprehensive suite of services, each elegantly presented on a single-page platform. The website encompasses key features and modules, highlighting the advantages and reasons for users to choose the services. Users can seamlessly navigate through various sections, including packages and testimonials, providing a holistic view of the offerings. This project not only exhibits my proficiency in React development but also emphasizes a user-centric design approach, ensuring a seamless and engaging experience for visitors. Explore the diverse facets of the services through an intuitive and visually appealing interface, making it a standout addition to my portfolio.",
