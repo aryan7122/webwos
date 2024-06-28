@@ -302,6 +302,7 @@ export const projects = [
     title: "YouTube Downloader",
     date: "Jun -2024",
     description: "YouTube Downloader is a web application that allows users to download YouTube videos in various formats and resolutions. It provides a simple and user-friendly interface for downloading videos directly from YouTube. Provides multiple download options including different resolutions (1080p, 720p, 480p, etc.) and formats (MP4, MP3).",
+    image: "https://github.com/aryan7122/webwos/blob/master/src/images/yt.gif?raw=true",
     tags: ["React Js", "Css", "MongoDb", "Node Js", "Express Js"],
     category: "web app",
     github: "https://github.com/aryan7122/YT_D",
