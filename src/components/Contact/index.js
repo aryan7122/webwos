@@ -115,7 +115,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="main">
+    <div className="main" id='Contact'>
       <h2 className="contact">
         <h1>Contact</h1>
         <p>Feel free to reach out to me for any questions or opportunities!</p>

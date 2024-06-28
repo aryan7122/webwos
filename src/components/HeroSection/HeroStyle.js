@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 // import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
@@ -74,6 +74,19 @@ export const HeroLeftContainer = styled.div`
   }
 `;
 
+
+const tiltAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+`;
+
 export const HeroRightContainer = styled.div`
   width: 100%;
   display: flex;
@@ -97,16 +110,23 @@ export const Img = styled.img`
   width: 100%;
   height: 100%;
   max-width: 319px;
-    max-height: 397px;
+  max-height: 397px;
   border-radius: 2%;
   border: 2px solid ${({ theme }) => theme.primary};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: ${tiltAnimation} 0.3s ease-in-out;
+  }
 
   @media (max-width: 768px) {
     max-width: 319px;
     max-height: 397px;
-  border-radius: 2%;
+    border-radius: 2%;
   }
 
   @media (max-width: 640px) {
@@ -114,6 +134,7 @@ export const Img = styled.img`
     max-height: 280px;
   }
 `;
+
 
 export const Title = styled.div`
   font-weight: 700;
@@ -168,6 +189,36 @@ export const SubTitle = styled.div`
     line-height: 32px;
   }
 `;
+// import styled, { keyframes } from 'styled-components';
+
+// Zigzag animation keyframes
+const zigzag = keyframes`
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+`;
+
+// Ping animation keyframes
+const ping = keyframes`
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+`;
 
 export const ResumeButton = styled.a`
     -webkit-appearance: button;
@@ -178,29 +229,26 @@ export const ResumeButton = styled.a`
     max-width: 300px;
     text-align: center;
     padding: 16px 0;
-    color:${({ theme }) => theme.white};
+    color: ${({ theme }) => theme.white};
     border-radius: 20px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
     background: #ff98008a;
-    ${'' /* background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%); */}
-    ${'' /* background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%); */}
-    ${'' /* background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%); */}
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
-    &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
+    box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
     
+        animation: ${zigzag} 2s infinite, 3s infinite;
+        transition: all 0.4s ease-in-out;
+        transform: scale(1.05);
+    &:hover {
+        animation: ${zigzag} 0.5s infinite, ${ping} 1s infinite;
+        transform: scale(1.05);
+        transition: all 0.4s ease-in-out;
+    }
     
     @media (max-width: 640px) {
         padding: 12px 0;
         font-size: 18px;
     } 
-
 `;
