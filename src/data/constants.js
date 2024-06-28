@@ -299,6 +299,25 @@ export const projects = [
  
   {
     id: 0,
+    title: "",
+    date: "Jun -2024",
+    description: "This platform allows users to create, read, and engage with blog posts across various categories, including self-development, health, and storytelling. Features: Admin Dashboard: Analyze user data, post statistics, and site performance. Create Post: Write and publish new blog posts using a rich text editor. Manage Users and Posts: View, update, and delete user profiles and blog posts. Subscribers: Manage email subscribers and send notifications for new posts. User Experience: Reading and Liking Posts: Users can read and like posts, providing feedback on their favorite content. Email Notifications: Users receive notifications when new posts are published. User Registration and Login: Secure and seamless user registration and login process. Admin Privileges: Content Management: Admins can create posts with detailed content, assign categories, and use tools for writing rich blog content. Site Management: Full control over all blog posts, including updating, deleting, and analyzing post metrics. Subscriber Management: View and manage subscribers who sign up to receive email notifications via the website footer. Dashboard: Activity Tracking: Monitor user activity, post performance, and other vital statistics to keep the site running smoothly. This project showcases my ability to build a feature-rich, user-friendly blogging platform with comprehensive administrative controls and a focus on user engagement.",
+    image: "https://github.com/aryan7122/MERN_BLOG_Client/raw/master/src/assets/images/git_rm/adminmenu.png",
+    tags: ["React Js", "Css", "Tailwindcss", "MUI", "MongoDb", "Node Js", "Express Js", "Recharts", "React-redux"],
+    category: "web app",
+    github: "https://github.com/aryan7122/YT_D",
+    webapp: "https://yt-d.netlify.app/",
+    member: [{
+      name: "Aryan Kushwaha",
+      img: "https://github.com/aryan7122/---Portfolio---/blob/master/src/images/HeroImage.jpg?raw=true",
+      linkedin: "https://www.linkedin.com/in/aryan-kushwaha-7dec2/",
+      github: "https://github.com/aryan7122",
+    },
+
+    ],
+  },
+  {
+    id: 0,
     title: "Blogging Website",
     date: "Jun -2024",
     description: "This platform allows users to create, read, and engage with blog posts across various categories, including self-development, health, and storytelling. Features: Admin Dashboard: Analyze user data, post statistics, and site performance. Create Post: Write and publish new blog posts using a rich text editor. Manage Users and Posts: View, update, and delete user profiles and blog posts. Subscribers: Manage email subscribers and send notifications for new posts. User Experience: Reading and Liking Posts: Users can read and like posts, providing feedback on their favorite content. Email Notifications: Users receive notifications when new posts are published. User Registration and Login: Secure and seamless user registration and login process. Admin Privileges: Content Management: Admins can create posts with detailed content, assign categories, and use tools for writing rich blog content. Site Management: Full control over all blog posts, including updating, deleting, and analyzing post metrics. Subscriber Management: View and manage subscribers who sign up to receive email notifications via the website footer. Dashboard: Activity Tracking: Monitor user activity, post performance, and other vital statistics to keep the site running smoothly. This project showcases my ability to build a feature-rich, user-friendly blogging platform with comprehensive administrative controls and a focus on user engagement.",
