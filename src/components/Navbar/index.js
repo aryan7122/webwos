@@ -5,7 +5,7 @@ import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 // import { CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
-import aryan from '../../images/HeroImage.jpg'
+import aryan from '../../images/a.jpg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -15,7 +15,7 @@ const Navbar = () => {
       <NavbarContainer>
         <NavLogo to='/'>
           {/* <DiCssdeck size="3rem" /> */}
-          <img src={aryan} alt="" style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'contain' }} />
+          <img src={aryan} alt="" style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'cover', ObjectPosition: 'top' }} />
           <Span>Aryan's Portfolio </Span>
         </NavLogo>
         <MobileIcon>
