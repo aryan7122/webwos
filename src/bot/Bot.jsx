@@ -3,14 +3,15 @@ import axios from 'axios';
 import { IoMdClose } from 'react-icons/io';
 import './Bot.css';
 import { IoSend } from "react-icons/io5";
+import Typewriter from 'typewriter-effect'; // Import Typewriter
 
 const Bot = () => {
     const [message, setMessage] = useState('');
     const [chat, setChat] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
-    const [loading, setLoading] = useState(false); // State to manage loading indicator
+    const [loading, setLoading] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
-    const inputRef = useRef(null); // Ref for the input field
+    const inputRef = useRef(null);
 
     const handleMessageChange = (e) => {
         setMessage(e.target.value);
@@ -25,11 +26,11 @@ const Bot = () => {
             setAlertMessage('Message cannot be empty!');
             setTimeout(() => {
                 setAlertMessage('');
-            }, 3000); // Clear alert after 3 seconds
+            }, 3000);
             return;
         }
 
-        setLoading(true); // Set loading state to true when sending message
+        setLoading(true);
         console.log('Sending message:', message);
         try {
             const res = await axios.post('https://bot-aryan-assistant.vercel.app/dialogflow', {
@@ -45,7 +46,7 @@ const Bot = () => {
         } catch (error) {
             console.error('Error:', error);
         } finally {
-            setLoading(false); // Set loading state to false after receiving response
+            setLoading(false);
         }
     };
 
@@ -56,7 +57,6 @@ const Bot = () => {
     };
 
     useEffect(() => {
-        // Focus on the input field when isOpen becomes true
         if (isOpen) {
             inputRef.current.focus();
         }
@@ -68,7 +68,13 @@ const Bot = () => {
                 <div className="Bot open">
                     <div className="bot">
                         <div className="header">
-                            <h1>Aryan Assistant</h1>
+                            <Typewriter
+                                options={{
+                                    strings: ['i am Aryan Assistant', 'How can I help you?', 'Ask me any questions', 'about Aryan '],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
                             <button className="toggle-btn" onClick={toggleChat}>
                                 <IoMdClose />
                             </button>
@@ -91,7 +97,7 @@ const Bot = () => {
                                 value={message}
                                 onChange={handleMessageChange}
                                 onKeyDown={handleKeyDown}
-                                ref={inputRef} // Attach ref to the input field
+                                ref={inputRef}
                             />
                             <button onClick={sendMessage} disabled={loading}>
                                 {loading ?
@@ -99,7 +105,6 @@ const Bot = () => {
                                     : <IoSend />}
                             </button>
                         </div>
-
                     </div>
                 </div>
             ) : (

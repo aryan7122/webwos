@@ -123,7 +123,7 @@
     flex: 1;
     font-size: 1rem;
     /* padding: 10px; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     margin-right: 5px;
     border-radius: 5px;
@@ -169,7 +169,7 @@
     display: flex;
     color: red;
     position: absolute;
-    bottom: 20px;
+    bottom: 5px;
     font-size: 1rem;
     padding-left: 20px;
 }
