@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { IoMdClose } from 'react-icons/io';
 import './Bot.css';
@@ -10,6 +10,7 @@ const Bot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false); // State to manage loading indicator
     const [alertMessage, setAlertMessage] = useState('');
+    const inputRef = useRef(null); // Ref for the input field
 
     const handleMessageChange = (e) => {
         setMessage(e.target.value);
@@ -54,6 +55,13 @@ const Bot = () => {
         }
     };
 
+    useEffect(() => {
+        // Focus on the input field when isOpen becomes true
+        if (isOpen) {
+            inputRef.current.focus();
+        }
+    }, [isOpen]);
+
     return (
         <div className="chat-wrapper">
             {isOpen ? (
@@ -83,6 +91,7 @@ const Bot = () => {
                                 value={message}
                                 onChange={handleMessageChange}
                                 onKeyDown={handleKeyDown}
+                                ref={inputRef} // Attach ref to the input field
                             />
                             <button onClick={sendMessage} disabled={loading}>
                                 {loading ? 'Sending...' : <span id='input-container'><IoSend /></span>}
@@ -93,7 +102,7 @@ const Bot = () => {
                 </div>
             ) : (
                 <div className="chat-icon">
-                    <img id='img' src="https://media.tenor.com/s1Y9XfdN08EAAAAj/bot.gif" alt="bot" className="toggle-btn" onClick={toggleChat} />
+                        <img id='img' src="https://github.com/aryan7122/webwos/blob/master/src/images/bot.gif?raw=true" alt="bot" className="toggle-btn" onClick={toggleChat} />
                 </div>
             )}
         </div>
