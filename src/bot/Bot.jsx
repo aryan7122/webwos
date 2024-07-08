@@ -95,7 +95,7 @@ const Bot = () => {
                             />
                             <button onClick={sendMessage} disabled={loading}>
                                 {loading ?
-                                    <img  src="https://www.katdarefoods.in/assets/imgs/ajax-loader.gif" alt="bot" id="img_loding" onClick={toggleChat} />
+                                    <img src="https://github.com/aryan7122/webwos/blob/master/src/images/lod.gif?raw=true" alt="bot" id="img_loding" onClick={toggleChat} />
                                     : <IoSend />}
                             </button>
                         </div>
