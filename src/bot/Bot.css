@@ -113,7 +113,7 @@
 .input-container input {
     flex: 1;
     padding: 10px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     border-radius: 5px;
     border: none;
     background-color: #171721;
@@ -128,7 +128,7 @@
 
 .input-container button {
     background-color: #171721;
-    padding: 10px 20px;
+    padding: 0px 10px;
     color: white;
     border: none;
     border-radius: 5px;
