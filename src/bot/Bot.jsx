@@ -94,7 +94,9 @@ const Bot = () => {
                                 ref={inputRef} // Attach ref to the input field
                             />
                             <button onClick={sendMessage} disabled={loading}>
-                                {loading ? 'Sending...' : <span id='input-container'><IoSend /></span>}
+                                {loading ?
+                                    <img  src="https://www.katdarefoods.in/assets/imgs/ajax-loader.gif" alt="bot" id="img_loding" onClick={toggleChat} />
+                                    : <IoSend />}
                             </button>
                         </div>
 
@@ -102,7 +104,7 @@ const Bot = () => {
                 </div>
             ) : (
                 <div className="chat-icon">
-                        <img id='img' src="https://github.com/aryan7122/webwos/blob/master/src/images/bot.gif?raw=true" alt="bot" className="toggle-btn" onClick={toggleChat} />
+                    <img id='img' src="https://github.com/aryan7122/webwos/blob/master/src/images/bot.gif?raw=true" alt="bot" className="toggle-btn" onClick={toggleChat} />
                 </div>
             )}
         </div>
