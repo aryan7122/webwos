@@ -16,6 +16,26 @@
     width: 25px;
 }
 
+#chat_Start{
+    position: absolute ;
+    font-size: 13px ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    /* Space between grid items */
+    /* padding: 10px; */
+    bottom: 40px;
+    left: 10px;
+}
+
+#chat_Start p{
+    background-color: #0000002c;
+    padding: 6px;
+    cursor: pointer;
+    color: gray;
+    border-radius: 5px;
+}
+
 .Bot {
     position: absolute;
     bottom: 0;

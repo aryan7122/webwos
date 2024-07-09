@@ -21,8 +21,8 @@ const Bot = () => {
         setIsOpen(!isOpen);
     };
 
-    const sendMessage = async () => {
-        if (message.trim() === '') {
+    const sendMessage = async (msg = message) => {
+        if (msg.trim() === '') {
             setAlertMessage('Message cannot be empty!');
             setTimeout(() => {
                 setAlertMessage('');
@@ -31,14 +31,14 @@ const Bot = () => {
         }
 
         setLoading(true);
-        console.log('Sending message:', message);
+        console.log('Sending message:', msg);
         try {
             const res = await axios.post('https://bot-aryan-assistant.vercel.app/dialogflow', {
-                query: message,
+                query: msg,
             });
             console.log('Received response:', res.data);
 
-            const newMessage = { text: message, from: 'user' };
+            const newMessage = { text: msg, from: 'user' };
             const botResponse = { text: res.data.fulfillmentText, from: 'bot' };
 
             setChat([...chat, newMessage, botResponse]);
@@ -56,6 +56,11 @@ const Bot = () => {
         }
     };
 
+    const handlePresetClick = (text) => {
+        setMessage(text);
+        sendMessage(text);
+    };
+
     useEffect(() => {
         if (isOpen) {
             inputRef.current.focus();
@@ -70,7 +75,7 @@ const Bot = () => {
                         <div className="header">
                             <Typewriter
                                 options={{
-                                    strings: ['i am Aryan Assistant', 'How can I help you?', 'Ask me any questions', 'about Aryan '],
+                                    strings: ['I am Aryan Assistant', 'How can I help you?', 'Ask me any questions', 'About Aryan'],
                                     autoStart: true,
                                     loop: true,
                                 }}
@@ -86,6 +91,14 @@ const Bot = () => {
                                 </div>
                             ))}
                         </div>
+                        {chat.length === 0 && (
+                            <div id="chat_Start">
+                                <p onClick={() => handlePresetClick('Hi👋')}>Hi 👋</p>
+                                <p onClick={() => handlePresetClick('Tell me about Aryan')}>Tell me about Aryan</p>
+                                <p onClick={() => handlePresetClick('Your Contact Detail')}>Your Contact Detail</p>
+                                <p onClick={() => handlePresetClick('Your Projects')}>Your Projects</p>
+                            </div>
+                        )}
                         {alertMessage && (
                             <div id="alert-message">
                                 {alertMessage}
@@ -99,9 +112,9 @@ const Bot = () => {
                                 onKeyDown={handleKeyDown}
                                 ref={inputRef}
                             />
-                            <button onClick={sendMessage} disabled={loading}>
+                            <button onClick={() => sendMessage()} disabled={loading}>
                                 {loading ?
-                                    <img src="https://github.com/aryan7122/webwos/blob/master/src/images/lod.gif?raw=true" alt="bot" id="img_loding" onClick={toggleChat} />
+                                    <img src="https://github.com/aryan7122/webwos/blob/master/src/images/lod.gif?raw=true" alt="loading" id="img_loding" />
                                     : <IoSend />}
                             </button>
                         </div>
